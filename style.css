@@ -46,6 +46,24 @@ body {
   color: var(--text);
 }
 .brand span { color: var(--primary); }
+.logo-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-mark {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white !important;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
 
 .nav-links {
   display: flex;
@@ -118,6 +136,13 @@ body {
   color: var(--text);
   border-color: var(--line);
 }
+.btn-zalo {
+  background: #12b76a;
+  color: white;
+}
+.btn-zalo:hover {
+  background: #0ea55f;
+}
 .btn.full { width: 100%; }
 
 .hero-stats {
@@ -182,7 +207,9 @@ body {
 
 .service-grid,
 .pricing-grid,
-.steps-grid {
+.steps-grid,
+.gallery-grid,
+.reviews-grid {
   display: grid;
   gap: 18px;
 }
@@ -195,10 +222,18 @@ body {
 .steps-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.gallery-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.reviews-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 
 .service-card,
 .price-card,
-.step-card {
+.step-card,
+.gallery-card,
+.review-card {
   padding: 24px;
 }
 .service-card h3,
@@ -245,6 +280,31 @@ body {
   color: var(--primary);
   font-size: 20px;
   margin-bottom: 18px;
+}
+.gallery-card,
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+.gallery-card h3,
+.review-card h3,
+.review-card strong {
+  margin-top: 0;
+}
+.gallery-card p,
+.review-card p {
+  color: var(--muted);
+}
+.gallery-card.warm { background: linear-gradient(180deg, #fff7ed, #ffffff); }
+.gallery-card.coral { background: linear-gradient(180deg, #fff1f2, #ffffff); }
+.gallery-card.gold { background: linear-gradient(180deg, #fffbeb, #ffffff); }
+.gallery-card.sunset { background: linear-gradient(180deg, #fff7ed, #fffefc); }
+.review-card strong {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--primary-dark);
 }
 
 .order-section {
@@ -307,7 +367,9 @@ textarea { resize: vertical; margin-top: 16px; }
   .order-layout,
   .service-grid,
   .pricing-grid,
-  .steps-grid {
+  .steps-grid,
+  .gallery-grid,
+  .reviews-grid {
     grid-template-columns: 1fr;
   }
 }
