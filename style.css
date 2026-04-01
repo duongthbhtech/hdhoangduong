@@ -193,6 +193,19 @@ body {
   padding-left: 20px;
   color: var(--muted);
 }
+.hero-media-card {
+  padding: 0;
+  overflow: hidden;
+}
+.hero-media {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+.hero-media-content {
+  padding: 24px 28px 28px;
+}
 .hotline-box {
   background: var(--surface-alt);
   border-radius: 16px;
@@ -310,6 +323,19 @@ body {
 .gallery-card.coral { background: linear-gradient(180deg, #fff1f2, #ffffff); }
 .gallery-card.gold { background: linear-gradient(180deg, #fffbeb, #ffffff); }
 .gallery-card.sunset { background: linear-gradient(180deg, #fff7ed, #fffefc); }
+.image-card {
+  padding: 0;
+  overflow: hidden;
+}
+.gallery-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.gallery-body {
+  padding: 22px;
+}
 .review-card strong {
   display: inline-block;
   margin-top: 12px;
