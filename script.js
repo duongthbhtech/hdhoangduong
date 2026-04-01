@@ -1,5 +1,6 @@
 const form = document.getElementById('printOrderForm');
 const formMessage = document.getElementById('formMessage');
+const backToTop = document.getElementById('backToTop');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -21,4 +22,16 @@ form.addEventListener('submit', (event) => {
 
   formMessage.textContent = 'Đã mở ứng dụng email để gửi yêu cầu đặt in. Nếu muốn gửi tự động hoàn toàn, có thể nối thêm API form sau.';
   formMessage.classList.add('success');
+});
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTop.classList.add('show');
+  } else {
+    backToTop.classList.remove('show');
+  }
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });

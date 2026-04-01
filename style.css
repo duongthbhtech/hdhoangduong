@@ -421,6 +421,46 @@ textarea { resize: vertical; margin-top: 16px; }
   }
 }
 
+.floating-action,
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 50;
+  font-size: 22px;
+}
+.floating-call {
+  bottom: 92px;
+  background: #111827;
+  color: #fff;
+}
+.floating-zalo {
+  bottom: 154px;
+  background: #0ea5e9;
+  color: #fff;
+}
+.back-to-top {
+  bottom: 30px;
+  background: var(--primary);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 720px) {
   .nav {
     flex-direction: column;
